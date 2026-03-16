@@ -7,7 +7,7 @@ import numpy as np
 from math import sin, pi, floor
 from pathlib import Path
 import sys
-from js import document, window, Uint8array, File
+from js import document, window, Uint8array, File, console
 import io
 import asyncio
 
@@ -15,6 +15,9 @@ import libraries.Lanczos as Lanczos
 
 
 async def get_and_compress(event) :
+
+    console.log("attempting to compress image")
+
     file_list = e.target.files
     first_item = file_list.item(0)
 
@@ -59,6 +62,8 @@ async def get_and_compress(event) :
     new_image = document.createElement('img')
     new_image.src = window.URL.createObjectURL(image_file)
     document.getElementById("output").appendChild(new_image)
+
+    console.log("image compressed")
 
     #im_base = myimg.resize((new_W, new_H), Image.LANCZOS)
 
