@@ -14,6 +14,10 @@ from pyscript import web, when
 
 import libraries.Lanczos as Lanczos
 
+@when("click", "#buttonid")
+def confirm_click(e) :
+    console.log("clicked on upload")
+
 @when("click", "#submitid")
 def get_and_compress(event) :
 
