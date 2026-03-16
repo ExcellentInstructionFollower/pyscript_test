@@ -14,7 +14,7 @@ from pyscript import web, when
 
 import libraries.Lanczos as Lanczos
 
-@when("click", "submitid")
+@when("click", "#submitid")
 def get_and_compress(event) :
 
     console.log("attempting to compress image")

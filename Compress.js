@@ -3,7 +3,7 @@ function setup() {
     
     document.getElementById('fileid').addEventListener('change', displayImage);
 
-    //document.getElementById('submitid').addEventListener('click', submitForm);
+    document.getElementById('submitid').addEventListener('click', submitForm);
     
 }
 
