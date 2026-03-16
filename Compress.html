@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="Compress.css">
+    <script defer src="Compress.js"></script>
+</head>
+<title>COMPRESS</title>
+<header>
+    Compressor website for PIR research purpose
+</header>
+<body onload="setup()">
+    <h2> 
+        <p>Import image: </p>
+    </h2>
+
+    <input id="fileid" type="file" name="filename" accept"image/*" hidden/>
+    <input id='buttonid' type="button" value='Upload MB' />
+    <img id="uploaded_image_id" alt="Uploaded image" hidden>
+    <input id='submitid' type="submit" value="submit"/>
+    <label for="new_width">New Width</label>
+    <input type="number" id="new_width" value="250"/> 
+    <label for="new_height">New Height</label>
+    <input type="number" id="new_height" value="250"/> 
+
+    <h2 id="output"> 
+        <p>Result: </p>
+    </h2>
+    <py-script src="./Compressor.py">
+    </py-script>
+</body>
+</html>
