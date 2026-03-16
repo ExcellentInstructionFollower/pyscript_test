@@ -10,12 +10,13 @@ import sys
 from js import document, window, Uint8array, File, console
 import io
 import asyncio
-from pyscript import web, when
+from pyscript import web, when, display
 
 import libraries.Lanczos as Lanczos
 
 @when("click", "#buttonid")
 def confirm_click(e) :
+    display("Upload clicked")
     console.log("clicked on upload")
 
 @when("click", "#submitid")
@@ -96,9 +97,7 @@ def get_and_compress(event) :
 
 # Run image processing code above whenever file is uploaded    
 #document.getElementById("submitid").addEventListener("click", get_and_compress)
-
-
-
+display("Site loaded with pyscript")
 
 
 
