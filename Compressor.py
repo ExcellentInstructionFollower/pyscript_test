@@ -10,19 +10,20 @@ import sys
 from js import document, window, Uint8array, File, console
 import io
 import asyncio
+from pyscript import web, when
 
 import libraries.Lanczos as Lanczos
 
-
-async def get_and_compress(event) :
+@when("click", "submitid")
+def get_and_compress(event) :
 
     console.log("attempting to compress image")
 
-    file_list = e.target.files
+    file_list = event.target.files
     first_item = file_list.item(0)
 
     #Get the data from the files arrayBuffer as an array of unsigned bytes
-    array_buf = Uint8Array.new(await first_item.arrayBuffer())
+    array_buf = Uint8Array.new(first_item.arrayBuffer())
 
     #BytesIO wants a bytes-like object, so convert to bytearray first
     bytes_list = bytearray(array_buf)
@@ -90,7 +91,7 @@ async def get_and_compress(event) :
 
 
 # Run image processing code above whenever file is uploaded    
-document.getElementById("submitid").addEventListener("click", get_and_compress)
+#document.getElementById("submitid").addEventListener("click", get_and_compress)
 
 
 
