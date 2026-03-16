@@ -3,11 +3,7 @@
     <link rel="stylesheet" href="Compress.css">
     <script defer src="Compress.js"></script>
     <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
-    <py-env>
-        - matplotlib
-        - numpy
-        - Pillow
-    </py-env>
+    
 </head>
 <title>COMPRESS</title>
 <header>
@@ -26,11 +22,17 @@
     <input type="number" id="new_width" value="250"/> 
     <label for="new_height">New Height</label>
     <input type="number" id="new_height" value="250"/> 
-    <p> site connected to pyscript I guess</p>
+    <p> site connected to pyscript and pyenv I guess</p>
 
     <h2 id="output"> 
         <p>Result: </p>
     </h2>
+    <py-env>
+        - matplotlib
+        - numpy
+        - Pillow
+        - ctypes
+    </py-env>
     <script type="py" src="./Compressor.py">
     </script>
 </body>
