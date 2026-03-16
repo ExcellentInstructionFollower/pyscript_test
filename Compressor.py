@@ -2,14 +2,14 @@ import ctypes
 
 import matplotlib.pyplot as plt
 from PIL import Image
-import easygui
+#import easygui
 import numpy as np
-from math import sin, pi, floor
-from pathlib import Path
-import sys
+#from math import sin, pi, floor
+#from pathlib import Path
+#import sys
 from js import document, window, Uint8Array, File, console
 import io
-import asyncio
+#import asyncio
 from pyscript import web, when, display
 
 import libraries.Lanczos as Lanczos
