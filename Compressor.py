@@ -7,7 +7,7 @@ import numpy as np
 from math import sin, pi, floor
 from pathlib import Path
 import sys
-from js import document, window, Uint8array, File, console
+from js import document, window, Uint8Array, File, console
 import io
 import asyncio
 from pyscript import web, when, display
@@ -36,7 +36,7 @@ def get_and_compress(event) :
 
     #myimg = Image.open(easygui.fileopenbox())
     #myimg = Image.open(Path(sys.argv[1]))
-    myimg = Image.open(my_bites)
+    myimg = Image.open(my_bytes)
 
     img_array = np.ascontiguousarray(np.array(myimg, dtype=np.int32))
     ptr_img = img_array.ctypes.data_as(ctypes.c_void_p)
